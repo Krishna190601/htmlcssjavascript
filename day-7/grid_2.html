@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .container{
+                 display: grid;
+                 grid-template-rows: 60px 300px ;
+                 grid-template-columns: repeat(12,1fr);
+                 gap: 20px;
+                 grid-template-areas: 
+                 "r r r r r r r r r r r r"
+                 "l l g g g g g g g g g g";
+     }
+     .nav{
+          background-color: red;
+          grid-area: r;
+     }
+     .left{
+          background-color: lightgreen;
+          grid-area: l;
+     }
+     .right{
+            background-color: green;
+            grid-area: g;
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="nav"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    </div>
+</body>
+</html>

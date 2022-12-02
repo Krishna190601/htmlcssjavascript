@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #cards{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 100px 200px;
+        grid-gap:20px ;
+        font-size: 30px;
+        color: black;
+        grid-template-areas: 
+        "y y y y y y y y y y y y"
+        "r r r g g g b b b e e e"
+        ;
+    }
+    #nav{
+        background-color: rgb(240, 240, 9);
+        grid-area: y;
+    }
+    #Box1{
+        background-color: red;
+        grid-area: r;
+    
+    }
+    #Box2{
+        background-color: green;
+        grid-area: g;
+    }
+    #Box3{
+        background-color: blue;
+        grid-area: b;
+    }
+    #Box4{
+        background-color: gray;
+        grid-area: e;
+    }
+    @media only screen and (min-width:0px) and (max-width:450px){
+        #cards{
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: 100px 200px 200px 200px 200px;
+                grid-template-areas: 
+                "y"
+                "r"
+                "e"
+                "g"
+                "b"
+                ; 
+             }
+              }
+              @media only screen and (min-width:451px) and (max-width:920px){
+        #cards{
+                grid-template-columns: repeat(2,2fr);
+                grid-template-rows: 100px 500px 500px;
+                grid-template-areas: 
+                "y y"
+                "r b"
+                "g e"
+                ;}
+                 
+                #box4{
+                    background-color: gold;
+                }
+                #box2{
+                    background-color: pink;
+                }
+                #box3{
+                    background-color: darkturquoise;
+                }
+                }
+                
+    </style>
+</head>
+<body>
+   <div id="cards">
+   <div id="nav">Navigation</div>
+   <div id="box1">Box1</div>
+   <div id="box2">Box2</div> 
+   <div id="box3">Box3</div>
+   <div id="box4">Box4</div>
+   </div>
+</body>
+</html>
